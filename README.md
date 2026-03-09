@@ -6,7 +6,7 @@ Este proyecto es la **Capa de Presentación (Frontend)** de una aplicación Full
 
 Esta interfaz de usuario **no funciona de forma aislada**. Para visualizar los datos, interactuar con el CRUD y evitar errores de conexión, es estrictamente necesario tener la API REST corriendo localmente en el puerto `3000`.
 
-👉 **[Ver, descargar y configurar el Backend en Go aquí](URL_DE_TU_REPO_DE_GO)**
+👉 **[Ver, descargar y configurar el Backend en Go aquí](https://github.com/diazjohan98/REST-API-GO)**
 
 Por favor, dirígete al repositorio del backend y sigue las instrucciones allí descritas (creación de la base de datos MySQL, configuración del archivo `.env` y ejecución del servidor) **antes** de levantar este cliente web.
 
@@ -29,7 +29,7 @@ Por favor, dirígete al repositorio del backend y sigue las instrucciones allí 
 
 1. Clona este repositorio:
    ```bash
-   git clone [https://github.com/tu-usuario/task-dashboard-angular.git](https://github.com/tu-usuario/task-dashboard-angular.git)
+   git clone [https://github.com/tu-usuario/task-dashboard-angular.git](https://github.com/diazjohan98/task-dashboard-angular.git)
    ```
 2. Entra a la carpeta del proyecto:
 
