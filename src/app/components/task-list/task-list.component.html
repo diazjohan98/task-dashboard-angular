@@ -1,0 +1,94 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto">
+  <h2>Gestor de Tareas (Go + Angular)</h2>
+
+  <div style="display: flex; gap: 10px; margin-bottom: 20px">
+    <input
+      type="text"
+      [(ngModel)]="newTask.name"
+      placeholder="Nombre de la tarea"
+      style="padding: 8px; flex: 1"
+    />
+
+    <input
+      type="text"
+      [(ngModel)]="newTask.content"
+      placeholder="Contenido de la tarea"
+      style="padding: 8px; flex: 2"
+    />
+
+    <button
+      (click)="saveTask()"
+      [style.background-color]="isEditing ? '#28a745' : '#00ADD8'"
+      style="padding: 8px 15px; color: white; border: none; cursor: pointer"
+    >
+      {{ isEditing ? 'Actualizar' : 'Agregar' }}
+    </button>
+
+    <button
+      *ngIf="isEditing"
+      (click)="resetForm()"
+      style="
+        padding: 8px 15px;
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        cursor: pointer;
+      "
+    >
+      Cancelar
+    </button>
+  </div>
+
+  <ul style="list-style: none; padding: 0">
+    <li
+      *ngFor="let task of tasks"
+      style="
+        background: #f4f4f4;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div>
+        <h4 style="margin: 0 0 5px 0; color: #333">{{ task.name }}</h4>
+        <p style="margin: 0; color: #666">{{ task.content }}</p>
+      </div>
+
+      <div style="display: flex; gap: 5px">
+        <button
+          (click)="editTask(task)"
+          style="
+            background-color: #ffc107;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+          "
+        >
+          Editar
+        </button>
+        <button
+          (click)="deleteTask(task.id)"
+          style="
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+          "
+        >
+          Eliminar
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <p *ngIf="tasks.length === 0" style="text-align: center; color: #999">
+    No hay tareas en la base de datos.
+  </p>
+</div>
