@@ -1,59 +1,36 @@
-# TaskDashboard
+# 📋 Task Dashboard - Angular Client
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+Este proyecto es la **Capa de Presentación (Frontend)** de una aplicación Full-Stack de gestión de tareas. Está construido con las últimas características de Angular (Componentes Standalone) y diseñado bajo el principio de separación de responsabilidades (Decoupled Architecture).
 
-## Development server
+## 🚀 Arquitectura y Enfoque
 
-To start a local development server, run:
+En lugar de construir una aplicación monolítica, este cliente web funciona de manera 100% independiente. Se comunica a través de peticiones HTTP con un backend propio, gestionando correctamente las políticas CORS y manteniendo el estado de la interfaz sincronizado con la base de datos en tiempo real.
 
-```bash
-ng serve
-```
+## 🛠️ Tecnologías y Herramientas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Framework:** Angular (Standalone Components)
+- **Lenguaje:** TypeScript
+- **Conectividad:** `HttpClient` / RxJS (Consumo de API REST)
+- **Estilos:** CSS3 / HTML5 (Estructura Flexbox)
+- **Data Binding:** Two-Way Data Binding (`ngModel`)
 
-## Code scaffolding
+## ✨ Características Principales
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **CRUD Completo:** Creación, lectura, actualización y eliminación de tareas.
+- **Ciclo de Vida:** Uso avanzado de `ngOnInit` para carga inicial de datos.
+- **Detección de Cambios:** Implementación de `ChangeDetectorRef` para evitar desincronización visual tras recibir respuestas del servidor.
+- **Manejo de Estados:** La interfaz se adapta dinámicamente dependiendo de si el usuario está creando o editando una tarea.
 
-```bash
-ng generate component component-name
-```
+## 🔗 Conexión con el Backend (Go)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Este proyecto no funciona de forma aislada. Requiere que la API REST desarrollada en **Go (Golang)** esté corriendo localmente en el puerto `3000`.
 
-```bash
-ng generate --help
-```
+👉 **[Ver el código fuente y arquitectura del Backend en Go aquí](PON_AQUI_EL_LINK_DE_TU_OTRO_REPOSITORIO)**
 
-## Building
+## ⚙️ Cómo ejecutar este proyecto localmente
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clona este repositorio: `git clone https://github.com/tu-usuario/task-dashboard-angular.git`
+2. Entra a la carpeta: `cd task-dashboard`
+3. Instala las dependencias: `npm install`
+4. Enciende el servidor de Angular: `ng serve -o`
+   _(Asegúrate de tener la API de Go encendida simultáneamente)._

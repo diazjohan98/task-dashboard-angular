@@ -9,6 +9,7 @@ import { Task } from '../../models/task';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
@@ -36,7 +37,7 @@ export class TaskListComponent implements OnInit {
         this.cdr.detectChanges();
       },
       error: (err) => {
-        console.error('❌ Error al cargar tareas:', err);
+        console.error('Error al cargar tareas:', err);
       },
     });
   }
